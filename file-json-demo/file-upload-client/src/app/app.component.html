@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+     <div class="form_bg">
+       <form #regForm="ngForm" (ngSubmit)= "register(regForm)">
+          <h2 class="text-center">Registration Page</h2>
+           <br>
+           <div class="form-group">
+              <input type="text" class="form-control"
+                     placeholder="First Name" name="firstname" ngModel="firstname">
+           </div>
+           <div class="form-group">
+            <input type="text" class="form-control"
+            placeholder="Last Name" name="lastname" ngModel="lastname">
+           </div>
+           <div class="form-group">
+            <input type="file" class="form-control"
+            placeholder="User File" name="userFile" (change)="fileChange($event)">
+           </div>
+           <div class="form-group">
+              <div class="align-center">
+                <button type="submit" class="btn btn-default" id= "register">Register</button>
+              </div>
+           </div>
+
+       </form>
+     </div>
+  </div>
+</div>
